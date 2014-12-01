@@ -1,0 +1,86 @@
+commit 856b737a6852689a0a71741dc21fcc483942d71c
+Author: Ravikanth Andhavarapu <raviandkanth@gmail.com>
+Date:   Mon Dec 1 16:22:16 2014 +0530
+
+    Insertion sort assignment
+
+diff --git a/insertion.rb b/insertion.rb
+new file mode 100644
+index 0000000..f3f88c8
+--- /dev/null
++++ b/insertion.rb
+@@ -0,0 +1,74 @@
++def insertion(a)
++	n = a.length
++	i = 1
++
++	while (i<=n-1)
++		j = n-1
++		# puts j
++		while (j>0) 
++			if a[j]<a[j-1]
++				b=a[j]
++				a[j] = a[j-1]
++				a[j-1] = b
++			end
++			j=j-1
++			# puts j
++		end
++		i = i+1
++		# puts i
++		puts a
++		puts " "
++	end
++
++	return a
++				
++end
++a = [13,24,22,23,11]
++# x = [6,5,4,3,1,2]
++# puts insertion(a)
++# puts " "
++puts insertion(a)
++
++
++# def splitarray(a)
++# 	len = a.length
++# 	n = len/2
++# 	index1 = 0
++# 	index2 = 0
++# 	temp = []
++# 	while (index1 <= n)
++# 		while (index2 < len-1)
++# 			if(!a[index2+1].nil?)
++# 				temp.push([a[index2], a[index2+1]].minmax)
++# 			else
++# 				temp.push([a[index2]])
++# 			end
++# 			index2 += 2
++# 		end
++# 		index1 += 1
++# 	end
++# 	return temp
++# end
++
++
++# def mergesort(a)
++# 	l = a.length
++# 	if(l == 1)
++# 		return a
++# 	elsif(l == 2)
++# 		return splitarray(a)
++# 	else
++# 		temp = splitarray(a)
++# 		return mergearray(mergesort(temp[0]),mergesort(temp[1]))
++# 	end
++# end
++
++
++
++# a =[2,3,5,6,7,8]
++# b = [3, 4, 5, 9]
++
++# puts mergearray(a,b)
++# # puts splitarray(b)
++
++# mergesort(a)
